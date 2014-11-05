@@ -8,3 +8,7 @@ envtpl /opt/tomcat/conf/server.xml.tpl --allow-missing
 
 echo "---> Configuring circus environment vars..."
 envtpl /etc/circus.d/tomcat.ini.tpl --allow-missing
+
+echo "---> chown tomcat /opt/tomcat ..."
+chown tomcat.tomcat /opt/tomcat -R
+echo done.
