@@ -30,7 +30,17 @@
                maxThreads="15" minSpareThreads="2" maxSpareThreads="5"
                enableLookups="false" redirectPort="8443" acceptCount="100"
                connectionTimeout="20000" disableUploadTimeout="true" 
-               address="0.0.0.0" />
+               address="0.0.0.0" 
+               {% if PROXY_SCHEME is defined %}
+               scheme="{{PROXY_SCHEME}}"
+               {% endif %}
+               {% if PROXY_NAME is defined %}
+               proxyName="{{PROXY_NAME}}"
+               {% endif %}
+               {% if PROXY_PORT is defined %}
+               proxyPort="{{PROXY_PORT}}"
+               {% endif %}
+               />
     <Engine name="Catalina" defaultHost="localhost" jvmRoute="jvm1">
       <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
              resourceName="UserDatabase"/>
