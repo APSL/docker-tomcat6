@@ -39,6 +39,3 @@ RUN \
 ADD app /app
 
 EXPOSE 8080
-
-# main circusbase start script
-CMD /bin/start.sh
