@@ -1,4 +1,4 @@
-Docker tomcat5 legacy app server
+Docker tomcat6 legacy app server
 ================================
 
 Legacy Tomcat6 / Java6 app server
